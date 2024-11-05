@@ -5,123 +5,142 @@ available key : 2acf8c972dba47449275230ecdf43291
 
 This key can also be obtained by signing up on the Spoonacular API platform. Once the key is in place, the app will be able to authenticate and retrieve recipe data as intended.
 
+Nande Mzantsi-ST10082747
+Courtney Wicomb- ST10051000
+Manneng Maripane- ST10112454
+Zuwarashe Makarimayi- ST10386045
+
 
 # Tsea Africa
 
-
-
-## Purpose of the App
-
-Tsea Africa: Your Passport to the Diverse Flavors of Africa is a unique recipe creation app that brings the rich and diverse culinary traditions of Africa to your fingertips. The app allows users to explore and create meals from various African cultures, providing a colorful and immersive experience. Each cultural cuisine is color-coded, offering a vibrant and intuitive way to explore African flavors. The app also includes features to help with grocery shopping, macro counting, and AI-driven assistance to make meal planning easier.
-
-### Key Features
-
-- **Cultural Recipes**: Color-coded sections representing different African cultures help users easily navigate and explore various culinary traditions.
-- **Grocery Shopping Function**: Automatically generated shopping lists based on selected recipes, with AI-driven suggestions for efficient grocery shopping.
-- **Macro Counter**: Nutritional tracking for each recipe, helping users meet their dietary goals.
-- **User-Generated Recipes**: Users can create and share their own recipes, browsing a section of recipes created by others for inspiration.
-- **Multilingual Support**: Initial support for Afrikaans and English, ensuring accessibility for a wider audience.
+### **Purpose of the App**
+_Tsea Africa: Your Passport to the Diverse Flavors of Africa_ is a unique recipe creation app that brings the rich and diverse culinary traditions of Africa to your fingertips. The app allows users to explore and create meals from various African cultures, providing a colorful and immersive experience. Each cultural cuisine is color-coded, offering a vibrant and intuitive way to explore African flavors. The app also includes features to help with grocery shopping, macro counting, and AI-driven assistance to make meal planning easier.
 
 ---
 
-## Design Considerations
+### **Key Features**
+- **Cultural Recipes**: Color-coded sections representing different African cultures help users easily navigate and explore various culinary traditions, from North African tagines to South African braais.
+- **Grocery Shopping Function**: Automatically generated shopping lists based on selected recipes, with AI-driven suggestions to streamline grocery shopping and save time.
+- **Macro Counter**: Nutritional tracking for each recipe, allowing users to monitor their intake of macronutrients such as carbohydrates, proteins, and fats, and helping them meet their dietary goals.
+- **User-Generated Recipes**: Users can create and share their own recipes, and browse a dedicated section featuring recipes created by others for inspiration and community engagement.
+- **Multilingual Support**: Initial support for Afrikaans and English ensures accessibility for a broader audience, promoting inclusivity in culinary exploration.
 
-When designing Tsea Africa, the following design principles and technical considerations were taken into account:
+---
 
-### UI/UX Design
-- **User-Focused Layout**: The app was designed to prioritize simplicity and user-friendliness, with intuitive navigation.
-- **Consistency**: The app maintains consistent design patterns and interactions across all screens, making it easy for users to familiarize themselves with the app.
-- **Responsive Design**: Ensures compatibility and ease of use on a range of devices, from mobile phones to tablets.
-- 
-![Screenshot 2024-11-04 234755](https://github.com/user-attachments/assets/1316b9ec-d30b-48d7-aa71-e865e2a56b2c)
+## **Design Considerations**
 
-### Technical Design
-- **Backend Architecture**: The app integrates third-party APIs for nutritional information and AI-driven recommendations, enhancing user experience.
-- **Security**: User data is securely stored using Firebase or a similar cloud-based solution.
-- **Scalability**: The codebase is modular, making it easier to add features and maintain in future versions.
-- 
-![Screenshot 2024-11-04 234844](https://github.com/user-attachments/assets/f316ff22-b4d3-4295-bbb6-9d50bebf6201)
+### **UI/UX Design**
+- **User-Focused Layout**: The app was designed with a focus on simplicity and user-friendliness, ensuring an intuitive navigation experience that caters to users of all ages and tech-savviness.
+- **Consistency**: The app maintains consistent design patterns and interactions across all screens, making it easy for users to familiarize themselves with the app and feel confident while navigating.
+- **Responsive Design**: The app ensures compatibility and ease of use on a range of devices, from mobile phones to tablets, providing a seamless experience across platforms.
 
-## CI/CD with GitHub Actions
+### **Technical Design**
+- **Backend Architecture**: The app integrates third-party APIs for nutritional information and AI-driven recommendations, enhancing user experience and providing accurate, up-to-date information.
+- **Security**: User data is securely stored using Firebase or a similar cloud-based solution, prioritizing user privacy and data protection.
+- **Scalability**: The codebase is modular, facilitating easier feature additions and maintenance in future versions to keep the app evolving with user needs.
 
-To streamline our development process, we use GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD). Our CI/CD pipeline is configured to automatically build and test the app when changes are pushed to the repository.
-![Screenshot 2024-11-04 225218](https://github.com/user-attachments/assets/5c083bb9-574c-44c1-a4aa-c11d62f4d7f5)
+---
 
+## **CI/CD with GitHub Actions**
+To streamline our development process, we use GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD). This setup allows us to maintain high-quality code and deliver updates to users efficiently.
 
-### GitHub Actions Workflow Overview
+### **GitHub Actions Workflow Overview**
+- **Automated Builds**: On each commit, the code is automatically built to ensure there are no compilation errors, providing immediate feedback to developers.
+- **Automated Testing**: Unit tests are executed to validate that existing functionalities work as expected, ensuring robustness and reliability.
+- **Automated Signing**: Our CI pipeline securely accesses a KeyStore file to sign the application, which is essential for releasing on Android and maintaining security standards.
+- **Artifact Storage**: After building, the app's output files are uploaded as artifacts, making it easy for testers and contributors to download and review each build.
 
-1. **Automated Builds**: On each commit, the code is automatically built to ensure there are no compilation errors.
-2. **Automated Testing**: Unit tests are run to validate that existing functionalities work as expected.
-3. **Automated Signing**: Our CI pipeline securely accesses a KeyStore file to sign the application, essential for releasing on Android.
-4. **Artifact Storage**: After building, the app's output files are uploaded as artifacts, making it easy for testers to download and review each build.
-
-#### CI/CD Pipeline Details
+### **CI/CD Pipeline Details**
 The GitHub Actions workflow file (`.github/workflows/build.yml`) is configured to:
-- Use environment secrets to store sensitive information like passwords and API keys.
-- Build the app using Gradle, with environment variables to handle secure signing.
-- Store build artifacts for easy access post-build.
+- Utilize environment secrets to securely store sensitive information like passwords and API keys, enhancing security.
+- Build the app using Gradle, with environment variables to manage secure signing efficiently.
+- Store build artifacts for easy access post-build, facilitating testing and distribution.
 
 ---
 
-## Installation Instructions
-
+## **Installation Instructions**
 To install Tsea Africa, follow these steps:
 1. Download the latest release from the [Releases](https://github.com/your-username/your-repo/releases) section.
-2. Transfer the APK file to your Android device and open it to install.
+2. Transfer the APK file to your Android device.
+3. Open the APK file to install the app, and follow any on-screen prompts to complete the installation.
 
-## Usage
+---
 
-1. **Home Page (Dashboard)**: Upon logging in, users are greeted by their meal plan overview, allowing quick access to current meal plans, grocery lists, and recently viewed recipes.
+## **Usage**
+1. **Home Page (Dashboard)**: Upon logging in, users are greeted by an overview of their meal plan, allowing quick access to current meal plans, grocery lists, and recently viewed recipes.
 2. **Meal Plan Creation**: Users can browse color-coded sections based on African cultures to add meals to their plans, adjusting according to dietary preferences and macro requirements.
-3. **Recipe Browsing**: Users can explore a wide range of user-generated and curated recipes, filtering by culture, ingredient, or dietary preference.
+3. **Recipe Browsing**: Users can explore a wide range of user-generated and curated recipes, filtering by culture, ingredient, or dietary preference, promoting exploration and culinary creativity.
 
-## Release Notes
+---
 
-### Version 1.0
+## **Release Notes**
+
+### **Version 1.0**
 _Released on: November 1, 2024_
 
-#### New Features and Updates
-- **Color-Coded Recipe Sections**: Introduced a vibrant way to navigate through different African cuisines.
-- **Grocery Shopping Integration**: Users can now automatically generate shopping lists based on selected recipes.
-- **AI-Driven Grocery Planning**: AI suggestions help users optimize their grocery shopping experience.
-- **User-Generated Recipes**: Added functionality for users to create and share their own recipes within the app.
+#### **New Features and Updates**
+- **Color-Coded Recipe Sections**: Introduced a vibrant way to navigate through different African cuisines, enhancing user experience.
+- **Grocery Shopping Integration**: Users can now automatically generate shopping lists based on selected recipes, streamlining the shopping process.
+- **AI-Driven Grocery Planning**: AI suggestions help users optimize their grocery shopping experience by recommending items based on previous selections and dietary needs.
+- **User-Generated Recipes**: Added functionality for users to create and share their own recipes within the app, fostering community engagement.
 
-#### Innovations Added
-- **Macro Counter**: Nutritional tracking feature that helps users monitor their carbohydrate, protein, and fat intake.
+#### **Innovations Added**
+- **Live Photo Uploads**: Users can now upload live photos of meals, enhancing the recipe-sharing experience with visual context.
+- **Biometric Access**: Enhanced security feature allowing users to log in using biometric authentication for added convenience.
+- **Macro Counter**: Nutritional tracking feature helps users monitor their carbohydrate, protein, and fat intake, empowering them to make healthier choices.
 - **Multilingual Support**: Initial support for Afrikaans and English, making the app accessible to a broader audience.
 
-### Previous Releases
+### **Previous Releases**
 - **Version 0.1**: Initial prototype focusing on basic recipe browsing and a single cultural cuisine.
 
 ---
 
-## Screenshots
+## **Screenshots**
+- **Home Screen**
+- 
+- ![Screenshot 2024-11-04 234755](https://github.com/user-attachments/assets/8256b659-8b5c-47ea-8e9c-b37f9d7f8d80)
 
-- **Home Screen**  
+  
+- **Recipe Browsing**
+-
+-     ![Screenshot 2024-11-04 234828](https://github.com/user-attachments/assets/6e6ac19d-b972-4c64-9460-84e8b9410307)
 
-![Screenshot 2024-11-04 234755](https://github.com/user-attachments/assets/94fa697c-bdef-48e6-808e-d0679080331e)
+  ![Recipe Browsing](https://github.com/user-attachments/assets/4971a493-57d7-4561-96a7-818517f66c00)
+  
+- **Recipe Adding**
 
-- **Recipe Browsing**  
- 
-![Screenshot 2024-11-04 234828](https://github.com/user-attachments/assets/4971a493-57d7-4561-96a7-818517f66c00)
+- 
+  ![Recipe Adding](https://github.com/user-attachments/assets/bc64c75a-c8c0-49fa-89a0-44d66817fead)
 
-- **Recipe Adding**  
+- **Language Change Feature**
 
+- 
+  ![Language Change](https://github.com/user-attachments/assets/368ac016-f156-402c-b084-8c276ff1c093)
 
-![Screenshot 2024-11-04 234812](https://github.com/user-attachments/assets/bc64c75a-c8c0-49fa-89a0-44d66817fead)
+- **Live Picture Upload**
 
+- 
+  ![Live Picture Upload](https://github.com/user-attachments/assets/921d3ac5-81a5-4773-addb-ae861c742786)
+  ![Live Picture Preview](https://github.com/user-attachments/assets/56de9d84-dbf4-442e-9223-a8acb76d36eb)
 
-## Future Development Plans
+- **Biometric Access**
+- 
+  ![Biometric Access](https://github.com/user-attachments/assets/1678bda7-3e35-4fe0-a6c4-613cb1933059)
 
+---
+
+## **Future Development Plans**
 We aim to add the following features in future versions:
-- **Expanded Language Support**: Adding more languages to reach a wider audience.
-- **Enhanced AI Features**: Further integration of AI to improve user experience in meal planning.
-- **Social Features**: Implementing community features to enhance user interaction and recipe sharing.
+- **Expanded Language Support**: Adding more languages to reach a wider audience, promoting inclusivity in culinary exploration.
+- **Enhanced AI Features**: Further integration of AI to improve user experience in meal planning, recipe suggestions, and dietary recommendations.
+- **Social Features**: Implementing community features to enhance user interaction, such as forums or social sharing capabilities to share cooking experiences and tips.
 
-## Contributing
+---
 
-We welcome contributions! to submit issues, feature requests, or pull requests.
+## **Contributing**
+We welcome contributions! Feel free to submit issues, feature requests, or pull requests. Please refer to our [Contributing Guide](./CONTRIBUTING.md) for more information on how to get involved.
 
-## License
+---
 
-This project is licensed under the MIT License.
+## **License**
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
